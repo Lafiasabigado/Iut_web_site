@@ -8,7 +8,7 @@
 
 {% block content %}
     <!-- About -->
-		<div id="about" class="section">
+		<div id="about" class="section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="100">
 
 			<!-- container -->
 			<div class="container">
@@ -71,15 +71,32 @@
 				<!-- container -->
 		</div>
 		<!-- /About -->
+		<section id="director-message">
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-6">
+				  <img src="{% static '/img/Directeur.png' %}" alt="Directeur de l'institut" class="img-fluid" data-aos="fade-right" data-aos-duration="1000">
+				</div>
+				<div class="col-md-6">
+				  <h2 class="" style="color: #FF6700;" data-aos="fade-up" data-aos-duration="1000">Mot du directeur</h2>
+				  <p class="lead" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Bienvenue à notre institut, où nous nous engageons à fournir une éducation de qualité supérieure à nos étudiants. Nous croyons que l'éducation est la clé du succès et nous sommes fiers de notre équipe de professeurs expérimentés et dévoués.</p>
+				  <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Nous offrons une variété de programmes d'études pour répondre aux besoins et aux intérêts de nos étudiants. Nous avons également des installations modernes et des équipements pour soutenir l'apprentissage et la recherche. Nous vous invitons à explorer notre site web pour en savoir plus sur notre institut et nos programmes.</p>
+				  <p class="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">Merci de votre intérêt pour notre institut. Nous sommes impatients de vous accueillir en tant qu'étudiant et de vous aider à atteindre vos objectifs éducatifs et professionnels.</p>
+				  <p class="text-right" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800"><strong>Pr Aboubakar Kissira</strong></p>
+				</div>
+			  </div>
+			</div>
+		  </section>
+		  
 
-		<!-- Courses -->
-		<div id="courses" class="section">
+		<!-- Filières -->
+		<div id="courses" class="section" >
 
 			<!-- container -->
 			<div class="container">
 
 				<!-- row -->
-				<div class="row justify-content-center">
+				<div class="row justify-content-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="100">
 					<div class="section-header text-center">
 						<h2>Explorer nos Filières</h2>
 						<p class="lead">Nos filières spécialisées offrent des opportunités uniques <br> pour développer vos compétences et votre carrière.</p>
@@ -91,7 +108,7 @@
 				<div id="courses-wrapper">
 
 					<!-- row -->
-					<div class="row">
+					<div class="row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="100">
 
 						<!-- single course -->
 						<div class="col-md-3 col-sm-6 col-xs-6">
@@ -160,7 +177,7 @@
 					<!-- /row -->
 
 					<!-- row -->
-					<div class="row">
+					<div class="row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="100">
 
 						<!-- single course -->
 						<div class="col-md-3 col-sm-6 col-xs-6">
@@ -233,7 +250,7 @@
 				</div>
 				<!-- /courses -->
 
-				<div class="row">
+				<div class="row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="100">
 					<div class="mx-auto d-block">
 						<a class="main-button icon-button" href="{% url 'iutapp:details' %}">Voir Details</a>
 					</div>
@@ -243,7 +260,7 @@
 			<!-- container -->
 
 		</div>
-		<!-- /Courses -->
+		<!-- /Filières -->
 
 		<!-- Call To Action -->
 		<div id="cta" class="section">
@@ -309,20 +326,9 @@
 					<div class="col-md-6">
 						<h3>Dernières Nouvelles de l'Institut</h3>
 						<p class="lead">🌟APPEL AUX SPONSORS🌟</p>
-						<p>Chers partenaires potentiels,
+						<p >Chers partenaires potentiels,
 						 Nous sommes ravis d'annoncer la tenue de notre Gala de l'excellence technologique, un évènement qui promet d'être une soirée inoubliable de célébration, d'élégance et de camaraderie! En tant qu'étudiants dévoués de l'IUT à l'université de Parakou, nous nous efforçons de créer des expériences enrichissantes qui unissent notre communauté étudiantes et célèbre nos réalisations.
-					 
-					  🎉Cette année,notre gala promet d'être le point culminant de l'année universitaire,avec cette soirée pleine de divertissements, de musique,de délicieux repas et de moments mémorables. C'est l'occasion parfaite pour les entreprises locales et les organisations de se connecter avec notre vivante communauté étudiante, tout en montrant leur soutien envers l'éducation et le développement des jeunes talents.
-					 
-					 En tant que sponsor du Gala de l'excellence technologique, vous bénéficierez d'une visibilité exceptionnel auprès d'un public captif et engagé, composé d'étudiants, de professeurs et membres de la communauté. Votre logo sera mis en avant sur tous nos supports promotionnels, y compris nos invitations, nos affiches, nos médias sociaux et notre site web dédié à l'événement. De plus, vous aurez l'opportunité de faire connaître votre entreprise ou votre marque lors de notre gala lui-même, avec des mentions spéciales et des remerciements publics. 
-					 
-					 💼En soutenant notre Gala, vous investissez dans l'avenir de notre communauté et vous aidez à créer des opportunités uniques pour les étudiants de l'IUT à l'université de Parakou. Votre générosité contribuera directement à la réussite de cet événement phare de notre année universitaire, et nous serions honorés de vous avoir comme partenaire.
-					 
-					 Pour en savoir plus sur les opportunités de sponsoring et sur la manière dont vous pouvez soutenir notre gala de l'excellence technologique, veuillez nous contacter par téléphone au 51716117 ou au 51385932 . Nous sommes impatients de discuter des possibilités de partenariat avec vous ! 
-					 Merci infiniment pour votre considération et votre soutien.
-					 
-					 Cordialement,
-					 [ L'équipe organisatrice du Gala de l'excellence technologique]</p>
+					    </p>
 					</div>
 
 					<div class="col-md-5 col-md-offset-1">

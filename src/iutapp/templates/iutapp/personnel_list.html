@@ -3,9 +3,9 @@
 {% block content %}
 <style>
   .card {
-      width: 85%;
       border-radius: 20px; /* Ajoute un rayon aux coins */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre autour de la card */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: 100px;
   }
   .card.animated {
       opacity: 1;
@@ -16,9 +16,9 @@
       object-fit: cover; 
   }
 </style>
-<div class="container">
-  <h3 class="text-center mb-4">Membres du personnel</h3>
-  <div class="row">
+<div class="container p-3">
+  <h3 class="text-center mb-4 m-3 p-3">Membres du personnel</h3>
+  <div class="row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="100">
     {% for membre in personnel %}
     <div class="col-md-4 col-sm-6 mb-4">
       <div class="card h-100 border shadow-sm">
@@ -26,39 +26,11 @@
         <div class="card-body">
           <h5 class="card-title text-center mb-3">{{ membre.nom }} {{ membre.prenom }}</h5>
           <p class="card-text"><strong>Qualité :</strong> {{ membre.qualite }}</p>
-          <p class="card-text">{{ membre.description|truncatewords:50 }}</p>
+          <p class="card-text">{{ membre.description|truncatewords:30 }}</p>
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
 </div>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-          if (isElementInViewport(card)) {
-              card.classList.add('animated');
-          }
-      });
-
-      function isElementInViewport(el) {
-          const rect = el.getBoundingClientRect();
-          return (
-              rect.top >= 0 &&
-              rect.left >= 0 &&
-              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-              rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-          );
-      }
-
-      document.addEventListener('scroll', () => {
-          cards.forEach(card => {
-              if (isElementInViewport(card)) {
-                  card.classList.add('animated');
-              }
-          });
-      });
-  });
-</script>
 {% endblock %}

@@ -6,6 +6,8 @@
     <meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static 'node_modules/aos/dist/aos.css' %}">
+		
 		<title>IUT</title>
 
 		<!-- Google font -->
@@ -24,8 +26,8 @@
         {% endblock %}
 </head>
 <body>
-    <header id="header" class="transparent-nav">
-		<div class="container">
+    <header id="header" class="transparent-nav" >
+		<div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="100">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<a class="navbar-brand" href="{% url 'iutapp:home' %}">
 					<img src="{% static 'img/iutbg.png' %}" style="width: 25%;" alt="logo">
@@ -33,7 +35,7 @@
 				<button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav" >
 					<ul class="navbar-nav main-menu">
 						<li class="nav-item">
 							<a class="nav-link" href="{% url 'iutapp:home' %}">Acceuil</a>
@@ -64,13 +66,13 @@
 			<div class="bg-image bg-parallax overlay" style="background-image:url( {% static '/img/background1.jpg' %})"></div>
 			<!-- /Backgound Image -->
 
-			<div class="home-wrapper">
+			<div class="home-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="100">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8">
 							<h1 class="white-text">Institut Universitaire de Technologie</h1>
 							<p class="lead white-text">Nous assurons une meilleure éducation pour un monde meilleur</p>
-							<a class="main-button icon-button" href="{% url 'iutapp:create' %}">Commencer!</a>
+							<a class="main-button icon-button" href="{% url 'iutapp:create' %}">Contactez-nous</a>
 						</div>
 					</div>
 				</div>
@@ -95,13 +97,12 @@
 			<!-- row -->
 			<div class="row" style="justify-content: center;">
 
-				<div class="col-md-8 col-md-offset-2 text-center">
+				<div class="col-md-8 col-md-offset-2 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-offset="100">
 					<h2 class="white-text">Contactez-nous</h2>
 					<p class="lead white-text">Rejoignez-nous pour une expérience éducative exceptionnelle et préparez-vous à conquérir le monde de la gestion.
 					</p>
 					<a class="main-button icon-button" href="{% url 'iutapp:create' %}">Contactez-nous maintenant</a>
 				</div>
-
 			</div>
 			<!-- /row -->
 
@@ -186,5 +187,15 @@
 		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
 		<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
 		<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+		<script src="{% static 'node_modules/aos/dist/aos.js' %}"></script>
+
+		<script>
+		    AOS.init({
+				duration: 1000, // durée de l'animation en millisecondes
+				easing: 'ease-out-quart', // fonction d'assouplissement de l'animation
+				once: true // si l'animation ne doit être exécutée qu'une fois
+				});
+		</script>
+		
 </body>
 </html>
