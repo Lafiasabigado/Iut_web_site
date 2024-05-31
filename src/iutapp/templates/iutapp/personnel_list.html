@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+  .card {
+      width: 85%;
+  }
+  .card.animated {
+      opacity: 1;
+      transform: translateY(0);
+  }
+</style>
+<div class="container">
+  <h3 class="text-center mb-4" style="color: #FF6700;">Membres du personnel</h3>
+  <div class="row">
+    {% for membre in personnel %}
+    <div class="col-md-4 col-sm-6 mb-4">
+      <div class="card h-100 border border-primary rounded-3 shadow-sm">
+        <img src="{{ membre.photo.url }}" class="card-img-top" alt="{{ membre.nom }} {{ membre.prenom }}">
+        <div class="card-body">
+          <h5 class="card-title text-center mb-3">{{ membre.nom }} {{ membre.prenom }}</h5>
+          <p class="card-text"><strong>Qualité :</strong> {{ membre.qualite }}</p>
+          <p class="card-text">{{ membre.description|truncatewords:100 }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+          if (isElementInViewport(card)) {
+              card.classList.add('animated');
+          }
+      });
+
+      function isElementInViewport(el) {
+          const rect = el.getBoundingClientRect();
+          return (
+              rect.top >= 0 &&
+              rect.left >= 0 &&
+              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+      }
+
+      document.addEventListener('scroll', () => {
+          cards.forEach(card => {
+              if (isElementInViewport(card)) {
+                  card.classList.add('animated');
+              }
+          });
+      });
+  });
+</script>
+{% endblock %}

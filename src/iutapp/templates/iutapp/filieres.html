@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>About</title>
+{% endblock %}
+
+{% block content %}
+    
+		<!-- Courses -->
+		<div id="courses" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row justify-content-center">
+					<div class="section-header text-center">
+						<h2>Explorer nos Filières</h2>
+						<p class="lead">Nos filières spécialisées offrent des opportunités uniques <br> pour développer vos compétences et votre carrière.</p>
+					</div>
+				</div>
+				<!-- /row -->
+
+				<!-- courses -->
+				<div id="courses-wrapper">
+
+					<!-- row -->
+					<div class="row">
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/ig2.jpg'%} " alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="">Gestion des Transports et Logistique</a>
+								<div class="course-details">
+									<span class="course-category">GTL</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/course02.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="{% url 'iutapp:details' %}">Informatique de Gestion</a>
+								<div class="course-details">
+									<span class="course-category">IG</span>
+									<span class="course-price course-premium">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/ig2.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Gestion Commerciale</a>
+								<div class="course-details">
+									<span class="course-category">GC</span>
+									<span class="course-price course-premium">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/iutgirl.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Gestion des Entreprises</a>
+								<div class="course-details">
+									<span class="course-category">GE</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+					</div>
+					<!-- /row -->
+
+					<!-- row -->
+					<div class="row">
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/course05.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Gestion des Banques</a>
+								<div class="course-details">
+									<span class="course-category">GB</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/iutgirl.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Gestion des Ressources Humaines</a>
+								<div class="course-details">
+									<span class="course-category">GRH</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/course02.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Master</a>
+								<div class="course-details">
+									<span class="course-category">IG</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/course01.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Master</a>
+								<div class="course-details">
+									<span class="course-category">GRH</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+					</div>
+					<!-- /row -->
+
+				</div>
+				<!-- /courses -->
+
+				<div class="row">
+					<div class="mx-auto d-block">
+						<a class="main-button icon-button" href="{% url 'iutapp:details' %}">Voir Details</a>
+					</div>
+				</div>
+
+			</div>
+			<!-- container -->
+
+		</div>
+		<!-- /Courses -->
+{% endblock %}

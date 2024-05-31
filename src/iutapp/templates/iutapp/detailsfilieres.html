@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Contact</title>
+{% endblock %}
+
+{% block content %}
+<style>
+    .card-img-top {
+        height: 300px;
+        object-fit: cover;
+    }
+    .card {
+        width: 70%;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .card.animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+<body>
+    <div class="container mt-5">
+        <h3 class="text-center mb-4" style="color: #FF6700;">Détails des Filières</h3>
+        <div class="row">
+            {% for filiere in filieres %}
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 border border-primary rounded-3 shadow-sm">
+                    <img src="{% static filiere.image %}" class="card-img-top" alt="{{ filiere.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title text-center mb-3">{{ filiere.title }}</h5>
+                        <p class="card-text"><strong>Diplômes délivrés :</strong> {{ filiere.diplome }}</p>
+                        <p class="card-text"><strong>Conditions d'admission :</strong> {{ filiere.admission }}</p>
+                        <p class="card-text"><strong>Débouchés :</strong> {{ filiere.debouche }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                if (isElementInViewport(card)) {
+                    card.classList.add('animated');
+                }
+            });
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            document.addEventListener('scroll', () => {
+                cards.forEach(card => {
+                    if (isElementInViewport(card)) {
+                        card.classList.add('animated');
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

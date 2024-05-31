@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>A propos</title>
+{% endblock %}
+
+{% block content %}
+    <!-- About -->
+		<div id="about" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="section-header">
+							<h2>Bienvenue à l'IUP-UP</h2>
+							<p class="lead">Institut Universitaire de Technologie de l'Université de Parakou.</p>
+						</div>
+
+						<!-- feature -->
+						<div class="feature">
+							<i class="feature-icon fa fa-flask"></i>
+							<div class="feature-content">
+								<h4>Cours de meilleurs qualités</h4>
+								<p>À l'IUT nous offrons des cours de meilleurs qualités à nos apprenants.</p>
+							</div>
+						</div>
+						<!-- /feature -->
+
+						<!-- feature -->
+						<div class="feature">
+							<i class="feature-icon fa fa-users"></i>
+							<div class="feature-content">
+								<h4>Professeurs Certifiés</h4>
+								<p>L'IUT dispose d'un effectif interessant de Professeurs Certifiés .</p>
+							</div>
+						</div>
+						<!-- /feature -->
+
+						<!-- feature -->
+						<div class="feature">
+							<i class="feature-icon fa fa-comments"></i>
+							<div class="feature-content">
+								<h4>Communauté</h4>
+								<p>Nos apprenants sont des étudiants exemplaires.</p>
+							</div>
+						</div>
+						<!-- /feature -->
+
+					</div>
+
+					<div class="col-md-6">
+						<div class="about-img">
+							<img src="{% static '/img/image_formation.jpeg' %}" alt="">
+						</div>
+					</div>
+
+				</div>
+				<!-- row -->
+
+			</div>
+		</div>
+		<!-- /About -->
+
+		<!-- container -->
+		<section class="info-area pb-120">
+			<div class="container-fluid">
+				<div class="row justify-content-center m-3 p-3">
+					<div class="col-lg-6 no-padding info-area-left">
+						<img class="img-fluid" src="{% static 'img/decanat.jpg' %}" alt="" style="width: 85%;">
+					</div>
+					<div class="col-lg-6 info-area-right">
+						<h1>Qui sommes-nous ?</h1>
+						<p>L'Institut Universitaire Technologie est un lieu d'excellence académique et d'innovation.</p>
+						<br>
+						<p>
+							Notre institut est un établissement d'enseignement supérieur créé en 2001; dédié à la formation et au développement des compétences dans divers domaines de la gestion. 
+							Situé au cœur de la ville de Parakou, au Bénin, nous nous engageons à offrir un environnement éducatif dynamique et stimulant pour nos étudiants..
+							L'IUT offre un environnement d'apprentissage dynamique, des opportunités de stage et un réseau professionnel solide.
+							Les diplômés de l'IUT sont hautement recherchés par les entreprises nationales et internationales pour leurs compétences spécialisées.
+						</p>
+					</div>
+				</div>
+			</div>	
+		</section><br><br><br><br>
+
+{% endblock %}

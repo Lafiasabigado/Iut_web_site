@@ -1,0 +1,190 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>IUT</title>
+
+		<!-- Google font -->
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+		<!-- Bootstrap -->
+		<link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+
+		<!-- Font Awesome Icon -->
+		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+		<!-- Custom stlylesheet -->
+		<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+        <meta charset="UTF-8">
+        {% block title %}
+        {% endblock %}
+</head>
+<body>
+    <header id="header" class="transparent-nav">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="{% url 'iutapp:home' %}">
+					<img src="{% static 'img/logo-alt.jpg' %}" style="width: 25%;" alt="logo">
+				</a>
+				<button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav main-menu">
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'iutapp:home' %}">Acceuil</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'iutapp:about' %}">A propos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'iutapp:filieres' %}">Nos Filières</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'iutapp:create' %}">Contact</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'iutapp:personnel' %}">Membres</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	
+
+		<!-- Home -->
+		<div id="home" class="hero-area">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url( {% static '/img/background1.jpg' %})"></div>
+			<!-- /Backgound Image -->
+
+			<div class="home-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<h1 class="white-text">Institut Universitaire de Technologie</h1>
+							<p class="lead white-text">Nous assurons une meilleure éducation pour un monde meilleur</p>
+							<a class="main-button icon-button" href="{% url 'iutapp:create' %}">Commencer!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- /Home -->
+    <section>
+         {% block content %}
+         {% endblock %}
+    </section>
+	<!-- Contact CTA -->
+	<div id="contact-cta" class="section">
+
+		<!-- Backgound Image -->
+		<div class="bg-image bg-parallax overlay" style="background-image:url({% static '/img/cta2-background.jpg' %})"></div>
+		<!-- Backgound Image -->
+
+		<!-- container -->
+		<div class="container">
+
+			<!-- row -->
+			<div class="row" style="justify-content: center;">
+
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<h2 class="white-text">Contactez-nous</h2>
+					<p class="lead white-text">Rejoignez-nous pour une expérience éducative exceptionnelle et préparez-vous à conquérir le monde de la gestion.
+					</p>
+					<a class="main-button icon-button" href="{% url 'iutapp:create' %}">Contactez-nous maintenant</a>
+				</div>
+
+			</div>
+			<!-- /row -->
+
+		</div>
+		<!-- /container -->
+
+	</div>
+	<!-- /Contact CTA -->
+    <!-- Footer -->
+		<footer id="footer" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<!-- footer logo -->
+					<div class="col-md-6">
+						<div class="footer-logo">
+							<a class="logo" href="{% url 'iutapp:home' %}">
+								<img src="{% static '/img/logo-alt.jpg' %}" alt="logo">
+							</a>
+						</div>
+					</div>
+					<!-- footer logo -->
+
+					<!-- footer nav -->
+					<div class="col-md-6">
+						<ul class="footer-nav">
+							<li class="nav-item"><a href="{% url 'iutapp:home' %}">Acceuil</a></li>
+							<li class="nav-item"><a href="{% url 'iutapp:about' %}">A Propos</a></li>
+							<li class="nav-item"><a href="{% url 'iutapp:filieres' %}">Filières</a></li>
+							<li class="nav-item"><a href="{% url 'iutapp:create' %}">Contact</a></li>
+						</ul>
+					</div>
+					<!-- /footer nav -->
+
+				</div>
+				<!-- /row -->
+
+				<!-- row -->
+				<div id="bottom-footer" class="row">
+
+					<!-- copyright -->
+					<div class="col-md-8 col-md-pull-4">
+						<div class="footer-copyright">
+							<span>&copy; 2024 IUT Parakou. Tous droits réservés..</span>
+						</div>
+					</div>
+					<!-- /copyright -->
+
+					<!-- social -->
+					<div class="col-md-4 col-md-push-8">
+						<ul class="footer-social">
+							<li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
+							<li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+					<!-- /social -->
+
+				</div>
+				<!-- row -->
+
+			</div>
+			<!-- /container -->
+
+		</footer>
+		<!-- /Footer -->
+
+		<!-- preloader -->
+		<div id='preloader'><div class='preloader'></div></div>
+		<!-- /preloader -->
+
+
+		<!-- jQuery Plugins -->
+		<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

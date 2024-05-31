@@ -1,0 +1,343 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+   <title>Acceuil</title>
+{% endblock %}
+
+{% block content %}
+    <!-- About -->
+		<div id="about" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-6">
+						<div class="section-header">
+							<h2>Bienvenue à l'IUP-UP</h2>
+							<p class="lead">Institut Universitaire de Technologie de l'Université de Parakou.</p>
+						</div>
+
+						<!-- feature -->
+						<div class="feature">
+							<i class="feature-icon fa fa-flask"></i>
+							<div class="feature-content">
+								<h4>Cours de meilleurs qualités</h4>
+								<p>À l'IUT nous offrons des cours de meilleurs qualités à nos apprenants.</p>
+							</div>
+						</div>
+						<!-- /feature -->
+
+						<!-- feature -->
+						<div class="feature">
+							<i class="feature-icon fa fa-users"></i>
+							<div class="feature-content">
+								<h4>Professeurs Certifiés</h4>
+								<p>L'IUT dispose d'un effectif interessant de Professeurs Certifiés.</p>
+							</div>
+						</div>
+						<!-- /feature -->
+
+						<!-- feature -->
+						<div class="feature">
+							<i class="feature-icon fa fa-comments"></i>
+							<div class="feature-content">
+								<h4>Communauté</h4>
+								<p>Nos apprenants sont des étudiants exemplaires.</p>
+							</div>
+						</div>
+						<!-- /feature -->
+
+					</div>
+
+					<div class="col-md-6">
+						<div class="about-img">
+							<img src="{% static '/img/image_formation.jpeg' %}" alt="">
+						</div>
+					</div>
+
+				</div>
+				<!-- row -->
+			</div>
+            <div class="row">
+                <div class="mx-auto d-block ">
+					<a class="main-button icon-button" href="{% url 'iutapp:about' %}">En savoir plus</a>
+				</div>
+			</div>
+				<!-- container -->
+		</div>
+		<!-- /About -->
+
+		<!-- Courses -->
+		<div id="courses" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row justify-content-center">
+					<div class="section-header text-center">
+						<h2>Explorer nos Filières</h2>
+						<p class="lead">Nos filières spécialisées offrent des opportunités uniques <br> pour développer vos compétences et votre carrière.</p>
+					</div>
+				</div>
+				<!-- /row -->
+
+				<!-- courses -->
+				<div id="courses-wrapper">
+
+					<!-- row -->
+					<div class="row">
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/ig2.jpg'%} " alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="">Gestion des Transports et Logistique</a>
+								<div class="course-details">
+									<span class="course-category">GTL</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/course02.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="{% url 'iutapp:details' %}">Informatique de Gestion</a>
+								<div class="course-details">
+									<span class="course-category">IG</span>
+									<span class="course-price course-premium">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/ig2.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Gestion Commerciale</a>
+								<div class="course-details">
+									<span class="course-category">GC</span>
+									<span class="course-price course-premium">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/iutgirl.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Gestion des Entreprises</a>
+								<div class="course-details">
+									<span class="course-category">GE</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+					</div>
+					<!-- /row -->
+
+					<!-- row -->
+					<div class="row">
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/course05.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Gestion des Banques</a>
+								<div class="course-details">
+									<span class="course-category">GB</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/iutgirl.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Gestion des Ressources Humaines</a>
+								<div class="course-details">
+									<span class="course-category">GRH</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/course02.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Master</a>
+								<div class="course-details">
+									<span class="course-category">IG</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+
+						<!-- single course -->
+						<div class="col-md-3 col-sm-6 col-xs-6">
+							<div class="course">
+								<a href="{% url 'iutapp:details' %}" class="course-img">
+									<img src="{% static '/img/course01.jpg' %}" alt="">
+									<i class="course-link-icon fa fa-link"></i>
+								</a>
+								<a class="course-title" href="#">Master</a>
+								<div class="course-details">
+									<span class="course-category">GRH</span>
+									<span class="course-price course-free">Infos</span>
+								</div>
+							</div>
+						</div>
+						<!-- /single course -->
+
+					</div>
+					<!-- /row -->
+
+				</div>
+				<!-- /courses -->
+
+				<div class="row">
+					<div class="mx-auto d-block">
+						<a class="main-button icon-button" href="{% url 'iutapp:details' %}">Voir Details</a>
+					</div>
+				</div>
+
+			</div>
+			<!-- container -->
+
+		</div>
+		<!-- /Courses -->
+
+		<!-- Call To Action -->
+		<div id="cta" class="section">
+
+			<!-- Backgound Image -->
+			<div class="bg-image bg-parallax overlay" style="background-image:url ({% static '/img/ig.jpg' %})"></div>
+			<!-- /Backgound Image -->
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-6">
+						<h2 class="white-text">Rejoignez-nous pour une expérience éducative exceptionnelle</h2>
+						<p class="lead white-text">Veuillez consulter les informations sur les admissions et les dates limites.</p>
+						<a class="main-button icon-button" href="#">Consulter</a>
+					</div>
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</div>
+		<!-- /Call To Action -->
+
+		<!-- Why us -->
+		<div id="why-us" class="section">
+
+			<!-- container -->
+			<div class="container">
+
+				<!-- container -->
+			<section class="info-area pb-120">
+			<div class="container-fluid">
+				<div class="row justify-content-center m-3 p-3">
+					<div class="col-lg-6 no-padding info-area-left">
+						<img class="img-fluid" src="{% static 'img/decanat.jpg' %}" alt="" style="width: 85%;">
+					</div>
+					<div class="col-lg-6 info-area-right">
+						<h1>Qui sommes-nous ?</h1>
+						<p>L'Institut Universitaire Technologie est un lieu d'excellence académique et d'innovation.</p>
+						<br>
+						<p>
+							Notre institut est un établissement d'enseignement supérieur créé en 2001; dédié à la formation et au développement des compétences dans divers domaines de la gestion. 
+							Situé au cœur de la ville de Parakou, au Bénin, nous nous engageons à offrir un environnement éducatif dynamique et stimulant pour nos étudiants..
+							L'IUT offre un environnement d'apprentissage dynamique, des opportunités de stage et un réseau professionnel solide.
+							Les diplômés de l'IUT sont hautement recherchés par les entreprises nationales et internationales pour leurs compétences spécialisées.
+						</p>
+					</div>
+				</div>
+			</div>	
+		</section><br><br><br><br>
+
+				<hr class="section-hr">
+
+				<!-- row -->
+				<div class="row">
+
+					<div class="col-md-6">
+						<h3>Dernières Nouvelles de l'Institut</h3>
+						<p class="lead">🌟APPEL AUX SPONSORS🌟</p>
+						<p>Chers partenaires potentiels,
+						 Nous sommes ravis d'annoncer la tenue de notre Gala de l'excellence technologique, un évènement qui promet d'être une soirée inoubliable de célébration, d'élégance et de camaraderie! En tant qu'étudiants dévoués de l'IUT à l'université de Parakou, nous nous efforçons de créer des expériences enrichissantes qui unissent notre communauté étudiantes et célèbre nos réalisations.
+					 
+					  🎉Cette année,notre gala promet d'être le point culminant de l'année universitaire,avec cette soirée pleine de divertissements, de musique,de délicieux repas et de moments mémorables. C'est l'occasion parfaite pour les entreprises locales et les organisations de se connecter avec notre vivante communauté étudiante, tout en montrant leur soutien envers l'éducation et le développement des jeunes talents.
+					 
+					 En tant que sponsor du Gala de l'excellence technologique, vous bénéficierez d'une visibilité exceptionnel auprès d'un public captif et engagé, composé d'étudiants, de professeurs et membres de la communauté. Votre logo sera mis en avant sur tous nos supports promotionnels, y compris nos invitations, nos affiches, nos médias sociaux et notre site web dédié à l'événement. De plus, vous aurez l'opportunité de faire connaître votre entreprise ou votre marque lors de notre gala lui-même, avec des mentions spéciales et des remerciements publics. 
+					 
+					 💼En soutenant notre Gala, vous investissez dans l'avenir de notre communauté et vous aidez à créer des opportunités uniques pour les étudiants de l'IUT à l'université de Parakou. Votre générosité contribuera directement à la réussite de cet événement phare de notre année universitaire, et nous serions honorés de vous avoir comme partenaire.
+					 
+					 Pour en savoir plus sur les opportunités de sponsoring et sur la manière dont vous pouvez soutenir notre gala de l'excellence technologique, veuillez nous contacter par téléphone au 51716117 ou au 51385932 . Nous sommes impatients de discuter des possibilités de partenariat avec vous ! 
+					 Merci infiniment pour votre considération et votre soutien.
+					 
+					 Cordialement,
+					 [ L'équipe organisatrice du Gala de l'excellence technologique]</p>
+					</div>
+
+					<div class="col-md-5 col-md-offset-1">
+						<a class="about-video" href="#">
+							<img src="{% static '/img/ig.jpg' %}" alt="">
+							<i class="play-icon fa fa-play"></i>
+						</a>
+					</div>
+
+				</div>
+				<!-- /row -->
+
+			</div>
+			<!-- /container -->
+
+		</div>
+		<!-- /Why us -->
+{% endblock %}
