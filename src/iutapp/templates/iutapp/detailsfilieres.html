@@ -7,28 +7,27 @@
 
 {% block content %}
 <style>
-    .card-img-top {
-        height: 300px;
-        object-fit: cover;
-    }
     .card {
-        width: 70%;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        width: 85%;
+        border-radius: 20px; /* Ajoute un rayon aux coins */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre autour de la card */
     }
     .card.animated {
         opacity: 1;
         transform: translateY(0);
     }
-</style>
+    .card-img-top {
+      height: 300px; 
+      object-fit: cover; 
+  }
+  </style>
 <body>
-    <div class="container mt-5">
-        <h3 class="text-center mb-4" style="color: #FF6700;">Détails des Filières</h3>
+    <div class="container">
+        <h3 class="text-center mb-4">Détails des Filières</h3>
         <div class="row">
             {% for filiere in filieres %}
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 border border-primary rounded-3 shadow-sm">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100 border shadow-sm">
                     <img src="{% static filiere.image %}" class="card-img-top" alt="{{ filiere.title }}">
                     <div class="card-body">
                         <h5 class="card-title text-center mb-3">{{ filiere.title }}</h5>
@@ -46,7 +45,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             const cards = document.querySelectorAll('.card');
             cards.forEach(card => {
-                if (isElementInViewport(card)) {
+                if (isElementInViewport(card)) 
+                {
                     card.classList.add('animated');
                 }
             });
